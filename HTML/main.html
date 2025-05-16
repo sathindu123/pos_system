@@ -40,63 +40,70 @@
 </section>
 
 <!--customer section-->
+<div id="heder-customer">
+    <h2>Customer Manage</h2>
+</div>
 <section id="customer">
-    <div id="heder-customer">
-        <h2>Customer Manage</h2>
-    </div>
-
-        <div id="left-customer" class="card"   style="width: 18rem;">
+    <div class="customer-top">
+        <!-- Left: Form -->
+        <div id="left-customer" class="card">
             <div class="card-body">
+                <div class="card-header text-dark">
+                    <h5>New Customer</h5>
+                </div>
                 <form>
                     <div class="mb-3">
-                        <label for="fname" class="form-label">Name</label>
+                        <label id="Name" for="fname" class="form-label">Name</label>
                         <input type="text" class="form-control" id="fname">
                     </div>
                     <div class="mb-3">
-                        <label for="address" class="form-label">Address</label>
-                        <textarea class="form-control" id="address" style="height: 100px"></textarea>
+                        <label id="address" for="fname" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="addresss">
                     </div>
                     <div class="mb-3">
                         <label for="contact" class="form-label">Contact</label>
                         <input type="text" class="form-control" id="contact">
                     </div>
                     <button id="student_save" type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-primary">Delete</button>
                     <button type="button" class="btn btn-primary">Reset</button>
                 </form>
             </div>
         </div>
 
-
-    <div id="right-customer">
-        <div class="input-customer-name input-group p-4">
-            <input type="text" id="search_customer_input" class=" form-control" placeholder="Search Username"
-                   aria-label="Username"
-                   aria-describedby="basic-addon1">
-        </div>
-        <div class="card-buttons card-body btn-group p-4">
-            <button type="button" class="button-customer-card btn m-1" id="button-search">Search</button>
-        </div>
-    </div>
-
-    <div class="row text-center">
-        <div class="customer-table">
-            <table class="table">
-                <thead class="customer-table-head table">
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Contact</th>
-                </tr>
-                </thead>
-                <tbody id="customer_table_body">
-
-                </tbody>
-            </table>
+        <!-- Right: Search -->
+        <div id="right-customer">
+            <div class="input-customer-name input-group p-4">
+                <input type="text" id="search_customer_input" class="form-control" placeholder="Search Username"
+                       aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="card-buttons card-body btn-group p-4">
+                <button type="button" class="button-customer-card btn m-1" id="button-search">Search</button>
+                <button type="button" class="button-customer-card btn m-1" id="button-search2">Clear</button>
+            </div>
+            <div id="btn-AllCus">
+                <button type="button" class="button-customer-card btn m-1" id="button-search3">View All Customer</button>
+            </div>
         </div>
     </div>
 
-
+    <!-- Bottom Section: Table -->
+    <div class="customer-table">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact</th>
+            </tr>
+            </thead>
+            <tbody id="customer_table_body">
+            <!-- Rows go here -->
+            </tbody>
+        </table>
+    </div>
 </section>
 
 

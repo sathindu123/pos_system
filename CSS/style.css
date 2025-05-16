@@ -49,3 +49,120 @@ header{
 
 /* Customer manage */
 
+#heder-customer h2{
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+.card-header {
+    background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF !important;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 0.8rem 1.2rem;
+    height: 50px;
+}
+.card-header > h5 {
+    margin: 0;
+
+}
+form .mb-3 #Name{
+    margin-top: 13px;
+
+}
+.customer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+
+#left-customer {
+    flex: 1 1 350px;
+    max-width: 450px;
+    margin-left:  100px;
+    margin-right:  90px;
+
+}
+
+
+#right-customer {
+    flex: 1 1 300px;
+    max-width: 400px;
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-right: 140px;
+}
+.card-buttons {
+    display: flex;
+    justify-content: flex-end; /* align right */
+    padding-right: 1.5rem;
+    position: relative;
+    width: 100%; /* 🟢 Add this to make flex-end work */
+}
+.card-buttons button {
+    background-color: #2196F3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    width: 120px;
+}
+
+.card-buttons button:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-buttons button:active {
+    background-color: #0D47A1;
+    transform: translateY(0);
+}
+#btn-AllCus{
+    margin-top: 35px;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+#btn-AllCus button{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background: gold;
+    width: 400px;
+
+}
+
+
+
+.customer-table {
+    width: 100%;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+    .customer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #left-customer,
+    #right-customer {
+        max-width: 90%;
+    }
+}
+
+
