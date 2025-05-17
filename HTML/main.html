@@ -10,7 +10,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">S-K POS_SYSTEM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -118,7 +118,7 @@
         <div id="left-item" class="card">
             <div class="card-body">
                 <div class="card-header text-dark">
-                    <h5>New Customer</h5>
+                    <h5>New Item</h5>
                 </div>
                 <form>
                     <div class="mb-3">
@@ -126,8 +126,8 @@
                         <input type="text" class="form-control" id="fnameItem">
                     </div>
                     <div class="mb-3">
-                        <label id="price" for="Price1" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="Price1">
+                        <label id="price1" for="Price1" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="Price2">
                     </div>
                     <div class="mb-3">
                         <label for="qty" class="form-label">Qty</label>
@@ -176,11 +176,200 @@
 
 
 
+<!-- place order section -->
+<section id="order-section">
+    <div class="div-card container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="topic">Place Order</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="outer col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="custom-card card">
+                    <div class="custom-card-body card-body">
+                        <form class="p-4 border rounded shadow-sm bg-white h-100">
+                            <h2 class="topic2 mb-3">Invoice</h2>
+                            <div class="mb-3">
+                                <label for="OrderId" class="form-label lable-from">Order ID:</label>
+                                <input type="text" class="form-control" id="OrderId"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="CustomerId" class="form-label lable-from">Customer ID:</label>
+                                <select class="customer-ids form-select form-select-sm" id="CustomerId"
+                                        aria-label="Small select example">
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="CustomerName" class="form-label lable-from">Customer Name:</label>
+                                <input type="text" class="form-control" id="CustomerName"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="CustomerAddress" class="form-label lable-from">Address:</label>
+                                <input type="text" class="form-control" id="CustomerAddress"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label lable-from">Date:</label>
+                                <input type="date" class="form-control" id="date" aria-describedby="emailHelp">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="outer col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="custom-card card">
+                    <div class="custom-card-body card-body">
+                        <form class="p-4 border rounded shadow-sm bg-white h-100">
+                            <h2 class="topic2 mb-3">Item Select</h2>
+                            <div class="mb-3">
+                                <label for="ItemId" class="form-label lable-from">Item ID:</label>
+                                <select class="item-ids form-select form-select-sm" id="ItemId"
+                                        aria-label="Small select example">
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ItemName" class="form-label lable-from">Item Name:</label>
+                                <input type="text" class="form-control" id="ItemName"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Price" class="form-label lable-from">Price:</label>
+                                <input type="text" class="form-control" id="Price" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Quantity" class="form-label lable-from">Available Quantity:</label>
+                                <input type="text" class="form-control" id="Quantity"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                                <label for="Order-Quantity" class="form-label lable-from">Order
+                                    Quantity:</label>
+                                <input type="text" class="form-control" id="Order-Quantity"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="add-item-and-clear-button d-grid">
+                                <button type="button" id="button-add-item" class="button-add-item btn btn-danger">Add
+                                    Item
+                                </button>
+                                <button type="button" id="clear" class="button-add-item-clear btn btn-danger mt-4">
+                                    Clear
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="outer col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="custom-card card">
+                    <div class="custom-card-body card-body">
+                        <form class="p-4 border rounded shadow-sm bg-white">
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label class="form-label total fw-bold fs-5">Sub Total:</label>
+                                <span id="text-sub-total" class="fw-bold fs-5"></span>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label class="form-label total fw-bold fs-5">Total:</label>
+                                <span id="text-total" class="fw-bold fs-5"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cash" class="form-label lable-from">Cash:</label>
+                                <input type="text" class="form-control" id="cash" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Discount" class="form-label lable-from">Discount:</label>
+                                <input type="text" class="form-control" id="Discount"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-4">
+                                <label for="Balance" class="form-label lable-from">Balance:</label>
+                                <input type="text" class="form-control" id="Balance"
+                                       aria-describedby="emailHelp">
+                            </div>
+                            <div class="div-button-purchase">
+                                <button type="button" id="button-purchase"
+                                        class="button-purchase btn btn-success btn-lg">Purchase
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="order-table">
+                <table class="table">
+                    <thead class="table">
+                    <tr>
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="select-items-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop05" data-bs-backdrop="static" data-bs-keyboard="false"
+             tabindex="-1"
+             aria-labelledby="staticBackdropLabel01" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel05">Add New Customer</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-2">
+                            <label for="update-order-item-code" class="form-label lable-from">Item Code:</label>
+                            <input type="text" class="form-control" id="update-order-item-code"
+                                   aria-describedby="emailHelp" placeholder="Enter Item Code">
+                        </div>
+                        <div class="mb-2">
+                            <label for="update-order-item-name" class="form-label lable-from">Item Name:</label>
+                            <input type="text" class="form-control" id="update-order-item-name"
+                                   aria-describedby="emailHelp" placeholder="Enter item Name">
+                        </div>
+                        <div class="mb-2">
+                            <label for="update-order-item-price" class="form-label lable-from">Item Price:</label>
+                            <input type="text" class="form-control" id="update-order-item-price"
+                                   aria-describedby="emailHelp" placeholder="Enter Item price">
+                        </div>
+                        <div class="mb-2">
+                            <label for="update-order-item-qty" class="form-label lable-from">Item Quantity:</label>
+                            <input type="text" class="form-control" id="update-order-item-qty"
+                                   aria-describedby="emailHelp" placeholder="Enter Item Quantity">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                id="order-item-btn_close">Close
+                        </button>
+                        <button type="button" class="btn btn-primary" id="order_item_update">Update</button>
+                        <button type="button" class="btn btn-primary" id="order_item_delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <script src="../assets/lib/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module" src="../controller/PageController.js"></script>
+<script type="module" src="../controller/customerController.js"></script>
 
 </body>
 </html>

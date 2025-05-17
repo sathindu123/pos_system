@@ -29,6 +29,16 @@ header{
     width: 100%;
 }
 
+header .navbar-brand{
+    color: green;
+    font-size: 2rem;
+    font-weight: bold;
+
+    header .navbar-brand:hover{
+        color: darkgreen;
+        font-size: 2rem;
+        font-weight: bold;
+    }}
 
 .navbar-nav .btn {
     color: white;
@@ -186,7 +196,7 @@ form .mb-3 #Name{
     margin: 0;
 
 }
-form .mb-3 #Name{
+form .mb-3 #NameItem{
     margin-top: 13px;
 
 }
@@ -269,4 +279,165 @@ form .mb-3 #Name{
     margin-bottom: 2rem;
     overflow-x: auto;
 
+}
+
+
+/*place holder*/
+
+#order-section {
+    background-color: #f5f8ff;
+    padding: 2rem 0;
+}
+
+.div-card {
+    padding: 1.5rem;
+    background-color: #f5f8ff;
+}
+
+.topic {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.topic:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #2196F3;
+}
+
+.outer {
+    padding: 0.5rem;
+}
+
+.custom-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card-body {
+    padding: 0.5rem;
+}
+
+.topic2 {
+    color: #1a237e;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+
+.lable-from {
+    color: #1a237e;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.form-control, .form-select {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+
+.customer-ids, .item-ids {
+    height: 38px;
+    border-radius: 5px;
+}
+
+.button-add-item {
+    background-color: green !important;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#clear {
+    background-color: #B5A8D5 !important;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-add-item:hover {
+    background-color: darkgreen !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-add-item:active {
+    background-color: lawngreen !important;
+    transform: translateY(0);
+}
+
+.button-purchase {
+    background-color: green !important;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.button-purchase:hover {
+    background-color: darkgreen !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-purchase:active {
+    background-color: lawngreen !important;
+    transform: translateY(0);
+}
+
+.div-button-purchase {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.total {
+    color: #1a237e;
+}
+
+
+#order_item_delete {
+    background-color: #f44336;
+}
+
+#order_item_delete:hover {
+    background-color: #d32f2f;
 }
