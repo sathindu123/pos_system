@@ -101,7 +101,74 @@
             </tr>
             </thead>
             <tbody id="customer_table_body">
-            <!-- Rows go here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!--item section-->
+<section id="item">
+
+    <div id="heder-item">
+        <h2>Item Manage</h2>
+    </div>
+    <div class="item-top">
+        <!-- Left: Form -->
+        <div id="left-item" class="card">
+            <div class="card-body">
+                <div class="card-header text-dark">
+                    <h5>New Customer</h5>
+                </div>
+                <form>
+                    <div class="mb-3">
+                        <label id="NameItem" for="fnameItem" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="fnameItem">
+                    </div>
+                    <div class="mb-3">
+                        <label id="price" for="Price1" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="Price1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="qty" class="form-label">Qty</label>
+                        <input type="text" class="form-control" id="qty">
+                    </div>
+                    <button id="Item_save" type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="button" class="btn btn-primary">Delete</button>
+                    <button type="button" class="btn btn-primary">Reset</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right: Search -->
+        <div id="right-item">
+            <div class="input-customer-name input-group p-4">
+                <input type="text" id="search_item_input" class="form-control" placeholder="Search Item"
+                       aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="card-buttons card-body btn-group p-4">
+                <button type="button" class="button-customer-card btn m-1" id="button-searchItem">Search</button>
+                <button type="button" class="button-customer-card btn m-1" id="button-search2Item">Clear</button>
+            </div>
+            <div id="btn-Allitem">
+                <button type="button" class="button-customer-card btn m-1" id="button-search3Item">View All Items</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section: Table -->
+    <div class="customer-table">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">code</th>
+                <th scope="col">Name</th>
+                <th scope="col">price</th>
+                <th scope="col">qty</th>
+            </tr>
+            </thead>
+            <tbody id="item_table_body">
             </tbody>
         </table>
     </div>
@@ -117,3 +184,6 @@
 
 </body>
 </html>
+
+
+
