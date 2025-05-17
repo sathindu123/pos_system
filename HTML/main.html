@@ -16,16 +16,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <button class="nav-item btn btn-link">
+                    <button id="home-nav" class="nav-item btn btn-link">
                         Home
                     </button>
-                    <button class="nav-item btn btn-link">
+                    <button id="customer-nav" class="nav-item btn btn-link">
                         Customer
                     </button>
-                    <button class="nav-item btn btn-link">
+                    <button id="item-nav" class="nav-item btn btn-link">
                         Item
                     </button>
-                    <button class="nav-item btn btn-link">
+                    <button id="place-nav" class="nav-item btn btn-link">
                         Place Order
                     </button>
                 </ul>
@@ -35,15 +35,16 @@
 </header>
 
 <!--home section-->
-<section>
+<section id="home">
     <div></div>
 </section>
 
 <!--customer section-->
-<div id="heder-customer">
-    <h2>Customer Manage</h2>
-</div>
+
 <section id="customer">
+    <div id="heder-customer">
+        <h2>Customer Manage</h2>
+    </div>
     <div class="customer-top">
         <!-- Left: Form -->
         <div id="left-customer" class="card">
@@ -108,7 +109,11 @@
 
 
 
-
+<script src="../assets/lib/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="module" src="../controller/PageController.js"></script>
+
 </body>
 </html>
