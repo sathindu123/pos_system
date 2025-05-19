@@ -230,6 +230,36 @@ header .navbar-brand:hover {
     gap: 1rem;
 }
 
+#delete_customer {
+    background: #333333; /* Dark grey background */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#delete_customer:hover {
+    background: #222222; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+#update_customer {
+    background: #444444; /* Slightly lighter dark grey */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#update_customer:hover {
+    background: #333333; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
 .button-customer-card {
     background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
     color: #fff;
