@@ -1,9 +1,13 @@
-.root{
+/* Import Sinhala Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap');
+
+.root {
     font-size: 14px;
     color: white;
+    font-family: 'Noto Sans Sinhala', 'Poppins', sans-serif;
 }
 
-header{
+header {
     padding: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -13,15 +17,9 @@ header{
     min-height: auto;
 }
 
-
 .navbar .container-fluid {
     justify-content: flex-end;
 }
-
-/*.navbar-brand {*/
-/*    font-weight: bold;*/
-/* */
-/*}*/
 
 .navbar-nav {
     display: flex;
@@ -29,16 +27,17 @@ header{
     width: 100%;
 }
 
-header .navbar-brand{
+header .navbar-brand {
     color: green;
     font-size: 2rem;
     font-weight: bold;
+}
 
-    header .navbar-brand:hover{
-        color: darkgreen;
-        font-size: 2rem;
-        font-weight: bold;
-    }}
+header .navbar-brand:hover {
+    color: darkgreen;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .navbar-nav .btn {
     color: white;
@@ -56,150 +55,333 @@ header .navbar-brand{
     background-color: #212529 !important;
 }
 
+/* Customer Manage - Advanced Styling */
+#customer {
+    background: linear-gradient(180deg, #f0f4ff 0%, #e6edff 100%);
+    padding: 3rem 1rem;
+    min-height: 100vh;
+}
 
-/* Customer manage */
-
-#heder-customer h2{
+#heder-customer h2 {
     margin-top: 20px;
-    color: green;
-    font-weight: bold;
+    color: #1a237e;
+    font-weight: 700;
     text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-.card-header {
-    background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    color: #FFFFFF !important;
-    border-radius: 8px 8px 0 0 !important;
-    padding: 0.8rem 1.2rem;
-    height: 50px;
+
+#heder-customer h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #2e7d32, #2196F3);
 }
+
+.customer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#left-customer, #right-customer {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+}
+
+#left-customer:hover, #right-customer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+#customer .card-header {
+    background: linear-gradient(135deg, #2e7d32 0%, #2196F3 100%);
+    color: #FFFFFF;
+    border-radius: 12px 12px 0 0;
+    padding: 1rem 1.5rem;
+    height: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
 .card-header > h5 {
     margin: 0;
-
-}
-form .mb-3 #Name{
-    margin-top: 13px;
-
-}
-.customer-top {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin: 2rem 0;
+    font-size: 1.25rem;
 }
 
-
-#left-customer {
-    flex: 1 1 350px;
-    max-width: 450px;
-    margin-left:  100px;
-    margin-right:  90px;
-
-}
-
-
-#right-customer {
-    flex: 1 1 300px;
-    max-width: 400px;
-    align-self: flex-start;
-    margin-left: 10px;
-    margin-right: 140px;
-}
-.card-buttons {
-    display: flex;
-    justify-content: flex-end; /* align right */
-    padding-right: 1.5rem;
+.modal-body .mb-2 {
     position: relative;
-    width: 100%; /* 🟢 Add this to make flex-end work */
+    margin-bottom: 1.5rem;
 }
-.card-buttons button {
-    background-color: #2196F3;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 0.3rem 1rem;
+
+.modal-body .form-label {
+    color: #1a237e;
     font-weight: 500;
+    display: block; /* Label on top */
+    margin-bottom: 0.5rem; /* Space below label */
+}
+
+
+.modal-body .form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.modal-body .form-control:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+.modal-body .form-control:focus + .form-label,
+.modal-body .form-control:not(:placeholder-shown) + .form-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.85rem;
+    background: #fff;
+    padding: 0 5px;
+    color: #2196F3;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 1rem;
+    gap: 15px;
+}
+
+.modal-footer #customer-btn_close {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
     width: 120px;
 }
 
-.card-buttons button:hover {
-    background-color: #1976D2;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+.modal-footer #customer-btn_close:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+
 }
 
-.card-buttons button:active {
-    background-color: #0D47A1;
-    transform: translateY(0);
-}
-#btn-AllCus{
-    margin-top: 35px;
-    justify-content: center;
-    margin-right: 30px;
+.modal-footer #save_customer {
+    width: 120px;
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-#btn-AllCus button{
-    font-size: 20px;
-    justify-content: center;
+.modal-footer #save_customer:hover {
+    background: #2196F3;
+    transform: scale(1.05);
+}
+
+#right-customer .input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-span {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-weight: 500;
+}
+
+#search_customer_input {
+    border-radius: 0 8px 8px 0;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+#search_customer_input:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.button-customer-card {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.button-customer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-customer-card:active {
+    transform: scale(0.95);
+}
+
+.button-customer-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.button-customer-card:active::after {
+    width: 200px;
+    height: 200px;
+}
+
+#btn-AllCus {
     text-align: center;
-    font-weight: bold;
-    color: white;
-    background: gold;
-    width: 400px;
-
+    margin-top: 2rem;
 }
 
+#btn-AllCus button {
+    background: linear-gradient(135deg, #ffb300 0%, #ff8f00 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
 
+#btn-AllCus button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
 .customer-table {
-    width: 100%;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     overflow-x: auto;
-
 }
 
-/* Responsive stacking */
+.table {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #2e7d32 0%, #2196F3 100%);
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem;
+    border: none;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(33, 150, 243, 0.1);
+    transform: scale(1.01);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+.customer-table::-webkit-scrollbar {
+    height: 8px;
+}
+
+.customer-table::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.customer-table::-webkit-scrollbar-thumb {
+    background: #2196F3;
+    border-radius: 8px;
+}
+
+.customer-table::-webkit-scrollbar-thumb:hover {
+    background: #1976D2;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .customer-top {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
-    #left-customer,
-    #right-customer {
-        max-width: 90%;
+    #left-customer, #right-customer {
+        max-width: 100%;
+    }
+
+    #btn-AllCus button {
+        max-width: 100%;
+    }
+
+    #heder-customer h2 {
+        font-size: 2rem;
     }
 }
 
+#right-customer{
+    width: 100%;
+}
+#right-cus-ses{
+    width: 100%;
+}
 
-/*item manage*/
-
-#heder-item h2{
+/* Item Manage */
+#heder-item h2 {
     margin-top: 20px;
     color: green;
     font-weight: bold;
     text-align: center;
 }
-.card-header {
-    background: linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    color: #FFFFFF !important;
-    border-radius: 8px 8px 0 0 !important;
-    padding: 0.8rem 1.2rem;
-    height: 50px;
-}
-.card-header > h5 {
-    margin: 0;
 
-}
-form .mb-3 #NameItem{
-    margin-top: 13px;
-
-}
 .item-top {
     display: flex;
     flex-wrap: wrap;
@@ -208,15 +390,12 @@ form .mb-3 #NameItem{
     margin: 2rem 0;
 }
 
-
 #left-item {
     flex: 1 1 350px;
     max-width: 450px;
-    margin-left:  100px;
-    margin-right:  90px;
-
+    margin-left: 100px;
+    margin-right: 90px;
 }
-
 
 #right-item {
     flex: 1 1 300px;
@@ -225,42 +404,14 @@ form .mb-3 #NameItem{
     margin-left: 10px;
     margin-right: 140px;
 }
-.card-buttons {
-    display: flex;
-    justify-content: flex-end; /* align right */
-    padding-right: 1.5rem;
-    position: relative;
-    width: 100%; /* 🟢 Add this to make flex-end work */
-}
-.card-buttons button {
-    background-color: #2196F3;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    padding: 0.3rem 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    width: 120px;
-}
 
-.card-buttons button:hover {
-    background-color: #1976D2;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.card-buttons button:active {
-    background-color: #0D47A1;
-    transform: translateY(0);
-}
-#btn-Allitem{
+#btn-Allitem {
     margin-top: 35px;
     justify-content: center;
     margin-right: 30px;
 }
 
-#btn-Allitem button{
+#btn-Allitem button {
     font-size: 20px;
     justify-content: center;
     text-align: center;
@@ -268,22 +419,16 @@ form .mb-3 #NameItem{
     color: white;
     background: gold;
     width: 400px;
-
 }
-
-
 
 .item-table {
     width: 100%;
     padding: 0 2rem;
     margin-bottom: 2rem;
     overflow-x: auto;
-
 }
 
-
-/*place holder*/
-
+/* Place Order */
 #order-section {
     background-color: #f5f8ff;
     padding: 2rem 0;
@@ -343,7 +488,6 @@ form .mb-3 #NameItem{
     position: relative;
     padding-bottom: 0.5rem;
 }
-
 
 .lable-from {
     color: #1a237e;
@@ -432,7 +576,6 @@ form .mb-3 #NameItem{
 .total {
     color: #1a237e;
 }
-
 
 #order_item_delete {
     background-color: #f44336;
