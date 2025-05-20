@@ -7,6 +7,7 @@ $('#delete_customer').css("display", "none");
 // load all customers
 
 $('#button-search3').on('click', function() {
+    loadCustomers();
     if ($('.customer-table').length) {
         $('html, body').animate({
             scrollTop: $('.customer-table').offset().top

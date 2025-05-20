@@ -165,23 +165,33 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="delete_item">Delete</button>
+                    <button type="button" class="btn btn-primary" id="update_item">Update</button>
+                    <button type="button" class="btn btn-primary" id="save_item">Save</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                             id="item-btn_close">Close
                     </button>
-                    <button type="button" class="btn btn-primary" id="save_item">Save</button>
                 </div>
             </div>
         </div>
 
         <!-- Right: Search -->
         <div id="right-item">
-            <div class="input-customer-name input-group p-4">
-                <input type="text" id="search_item_input" class="form-control" placeholder="Search Item"
-                       aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-            <div class="card-buttons card-body btn-group p-4">
-                <button type="button" class="button-customer-card btn m-1" id="button-searchItem">Search</button>
-                <button type="button" class="button-customer-card btn m-1" id="button-search2Item">Clear</button>
+            <div class="card item-card mt-3 mb-4">
+                <div class="card-header text-dark">
+                    <h5>Search Item</h5>
+                </div>
+                <div class="input-item-name input-group p-4">
+                    <span class="input-span input-group-text" id="basic-addon2">Input</span>
+                    <input type="text" class=" form-control" placeholder="Item name" aria-label="Item name"
+                           aria-describedby="basic-addon1" id="search_item_input">
+                </div>
+                <div class="card-buttons card-body btn-group p-4">
+                    <button type="button" class="button-item-card button btn m-1" id="btn-item-search">Search
+                    </button>
+                    <button type="button" class="button-item-card button btn m-1" id="btn-item-search-clear">Clear
+                    </button>
+                </div>
             </div>
             <div id="btn-Allitem">
                 <button type="button" class="button-customer-card btn m-1" id="button-search3Item">View All Items</button>
@@ -190,7 +200,7 @@
     </div>
 
     <!-- Bottom Section: Table -->
-    <div class="customer-table">
+    <div class="item-table">
         <table class="table table-bordered table-striped text-center">
             <thead class="table-dark">
             <tr>
