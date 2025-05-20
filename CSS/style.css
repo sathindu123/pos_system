@@ -805,3 +805,19 @@ header .navbar-brand:hover {
 #order_item_delete:hover {
     background-color: #d32f2f;
 }
+
+
+
+
+/* order history section */
+
+#order-history-section {
+    background-color: #f5f8ff;
+    height: 90vh;
+    padding: 2rem 0;
+}
+
+.order-search {
+    display: flex !important;
+    justify-content: center !important;
+}
