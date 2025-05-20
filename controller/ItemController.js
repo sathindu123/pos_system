@@ -20,6 +20,7 @@ $('#button-search3Item').on('click', function() {
 
 
 
+
 function loadItems(){
     $('#update_item').css("display", "none");
     $('#delete_item').css("display", "none");
