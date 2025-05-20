@@ -659,7 +659,7 @@ header .navbar-brand:hover {
 }
 
 .topic {
-    color: green;
+    color: #1a237e;
     font-weight: bold;
     margin-bottom: 1.5rem;
     position: relative;
@@ -708,6 +708,7 @@ header .navbar-brand:hover {
     padding-bottom: 0.5rem;
 }
 
+
 .lable-from {
     color: #1a237e;
     font-weight: 500;
@@ -732,14 +733,14 @@ header .navbar-brand:hover {
 }
 
 .button-add-item {
-    background-color: green !important;
+    background-color: #2196F3 !important;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
     padding: 0.7rem 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 #clear {
@@ -754,18 +755,18 @@ header .navbar-brand:hover {
 }
 
 .button-add-item:hover {
-    background-color: darkgreen !important;
+    background-color: #1976D2 !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .button-add-item:active {
-    background-color: lawngreen !important;
+    background-color: #0D47A1 !important;
     transform: translateY(0);
 }
 
 .button-purchase {
-    background-color: green !important;
+    background-color: #2196F3 !important;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
@@ -777,13 +778,13 @@ header .navbar-brand:hover {
 }
 
 .button-purchase:hover {
-    background-color: darkgreen !important;
+    background-color: #1976D2 !important;
     transform: translateY(-2px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .button-purchase:active {
-    background-color: lawngreen !important;
+    background-color: #0D47A1 !important;
     transform: translateY(0);
 }
 
@@ -795,6 +796,7 @@ header .navbar-brand:hover {
 .total {
     color: #1a237e;
 }
+
 
 #order_item_delete {
     background-color: #f44336;

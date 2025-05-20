@@ -119,9 +119,9 @@ $(`#btn-item-search-clear`).on('click', function(){
 
 $('#update_item').on('click', function () {
     let idx = $('.selected').data('index');
-    let name = $('#update_item_name').val();
-    let price = $('#update_item_price').val();
-    let quantity = $('#update_item_quantity').val();
+    let name = $('#item_name').val();
+    let price = $('#item_price').val();
+    let quantity = $('#item_quantity').val();
 
     if (name === '' || price === '' || quantity === '') {
         Swal.fire({
